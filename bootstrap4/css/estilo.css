@@ -1,0 +1,34 @@
+
+h1 {
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.banner{
+    background-image: url("../img/fundo.png.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+label,button,a,h5,p{
+
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.btn.btn-marinho {
+    border:none;
+    background-color: #091D27;
+    background-image: -moz-linear-gradient(top, #091D27, #091D27);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#091D27), to(#091D27));
+    background-image: -webkit-linear-gradient(top, #091D27, #091D27);
+    background-image: -o-linear-gradient(top, #091D27, #091D27);
+    background-image: linear-gradient(to bottom, #091D27, #091D27);
+}
+
+.btn.btn-gold{
+    border:none;
+    background-color: #D99634;
+    background-image: -moz-linear-gradient(top, #D99634, #D99634);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#D99634), to(#D99634));
+    background-image: -webkit-linear-gradient(top, #D99634, #D99634);
+    background-image: -o-linear-gradient(top, #D99634, #D99634);
+    background-image: linear-gradient(to bottom, #D99634, #D99634);
+}
