@@ -4,3 +4,5 @@ from .models import *
 
 admin.site.register(Funcionario)
 admin.site.register(Consumidor)
+admin.site.register(GRU)
+admin.site.register(Transacao)
