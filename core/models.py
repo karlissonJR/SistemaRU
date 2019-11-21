@@ -14,8 +14,9 @@ class Funcionario(Usuario):
     funcao = models.CharField(max_length=50)
 
 class Consumidor(Usuario):
-    credito = models.DecimalField(decimal_places=2, max_digits=10)
+    credito = models.DecimalField(decimal_places=2, max_digits=10, default=0)
     bolsista = models.BooleanField(default=False)
+    modalidade = models.CharField(max_length=30)
 
 class GRU(models.Model):
     codigo_barras = models.CharField(primary_key=True, max_length=25)

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block conteudo %}
+    <section>
+        <!-- Inicio seção Login-->
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- texto da seção-->
+                    <div class="text-center">
+                        <h1 class="text-white" class="display-5" class="text-center">Cadastrar Consumidor</h1>
+                    </div>
+                </div><!-- fim do texto da seção-->
+            </div>
+
+            <div class="row">
+                <!-- Formulario login-->
+                <div class="col-3"></div>
+                <div class="col-md-6">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {% for field in form %}
+
+                            {% if field.name == "modalidade" %}
+                            <div class="form-group">
+                                <label for="{{field.name}}" class="text-white">Modalidade</label>
+                                <select name="{{field.name}}" id="{{field.id_for_label}}" class="form-control">
+                                    <option value="{{field.value}}" selected >Escolher..</option>
+                                    <option value="graduacao">Graduação</option>
+                                    <option value="mestrado">Mestrado</option>
+                                    <option value="servidor">Servidor</option>
+                                </select>
+                            </div>
+                            {% else %}
+                            <div class="form-group pt-3">
+                                <label for="inputAddress" class="text-white">{{field.name}}</label>
+                                <input type="text" class="form-control" id="{{field.id_for_label}}" value="{{field.value|default_if_none:''}}" name="{{field.name}}">
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4" class="text-white">Senha</label>
+                                <input type="password" class="form-control" id="inputEmail4">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4" class="text-white">Confirmar senha</label>
+                                <input type="password" class="form-control" id="inputPassword4">
+                            </div>
+                        </div>
+
+                        <a class="btn btn-gold text-white" href="{% url 'principal' %}" role="button">Voltar</a>
+                        <button type="submit"  class="btn btn-success float-right">Confirmar</button>
+                    </form>
+                </div>
+                <div class="col-3"></div>
+            </div>
+            <!--Fim formulario login-->
+        </div>
+
+    </section><!-- Fím seção Login-->
+
+{% endblock %}

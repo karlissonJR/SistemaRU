@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block btnSair %}
+  <a class="btn btn-danger float-right" href="index.html" role="button">Sair</a>
+{% endblock %}
+
+{% block conteudo %}
+
+<section>
+  <!-- Inicio seção Cards-->
+  <div class="container pt-5 ">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- texto da seção-->
+        <div class="text-center">
+          <h1 class="text-white" class="display-5" class="text-center">Seja Bem Vindo</h1>
+        </div>
+      </div><!-- fim do texto da seção-->
+    </div>
+
+    <div class="row pt-3">
+      <!-- Formulario login-->
+      <div class="col-md-3 col-sm-6 pt-5 ">
+        <div class="card" style="width: 17rem;">
+          <img class="card-img-top" src="{% static 'img/card1.png' %}" alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title pt-1">Cadastrar Consumidor</h5>
+            <a href="{% url 'cadastrar_consumidor' %}" class="btn btn-marinho text-white">Entrar</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-3 col-sm-6 pt-5 ">
+        <div class="card" style="width: 17rem;">
+          <img class="card-img-top" src="{% static 'img/gru1.png' %}" alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title pt-1">Cadastrar GRU</h5>
+            <a href="cadastrar-gru.html" class="btn btn-marinho text-white">Entrar</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-3 col-sm-6 pt-5 ">
+        <div class="card" style="width: 17rem;">
+          <img class="card-img-top" src="{% static 'img/debitar1.png' %}" alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title pt-1">Debitar CPF</h5>
+            <a href="debitar-cpf.html" class="btn btn-marinho text-white">Entrar</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-3 col-sm-6 pt-5 ">
+        <div class="card" style="width: 17rem;">
+          <img class="card-img-top" src="{% static 'img/info1.png' %}" alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title pt-1">Informações</h5>
+            <a href="{% url 'info' %}" class="btn btn-marinho text-white">Entrar</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+</section><!-- Fím seção Cards-->
+
+ 
+  <!-- Footer -->
+ <!--<footer class="page-footer font-small teal pt-4" style="background-color:#091D28;" >
+
+  
+    <div class="footer-copyright text-center py-3 pt-3">
+      <p class="text-white">© 2019 Copyright: Sistema RU </p>
+      
+    </div>
+    
+
+  </footer>
+-->
+  <!-- Footer -->
+
+{% endblock %}
