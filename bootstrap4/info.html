@@ -10,29 +10,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css" />
 
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap" rel="stylesheet">
 
-    <script>
-      $(document).ready(function() {
-      $('#example').DataTable();
-      } );
-
-    </script>
-    <script>$(document).ready(function () {
-            $('#example').DataTable({
-                "language": {
-                    "lengthMenu": "Display _MENU_ records per page",
-                    "zeroRecords": "Nothing found - sorry",
-                    "info": "Showing page _PAGE_ of _PAGES_",
-                    "infoEmpty": "No records available",
-                    "infoFiltered": "(filtered from _MAX_ total records)"
-                }
-            });
-        });</script>
+    
+    
 </head>
 
 <body class="banner">
@@ -43,8 +28,8 @@
 
     </div>-->
 
-    <header>
-        <!-- inicio do cabeçalho-->
+    <header><!-- inicio do cabeçalho-->
+        
         <nav class="navbar navbar-expand-sm navbar-light" style="background-color:#091D28;">
             <div class="container">
 
@@ -58,8 +43,8 @@
 
     </header><!-- FIM do cabeçalho-->
 
-    <section>
-        <!-- Inicio seção Login-->
+    <section><!-- Inicio seção Login-->
+        
         <div class="container pt-5">
             <div class="row">
                 <div class="col-md-12">
@@ -70,69 +55,99 @@
                 </div><!-- fim do texto da seção-->
             </div>
 
-            <div class="row pt-3"  >
+            <div class="row pt-3">
                 <!-- Formulario login-->
                 <!--<div class="col-3"></div>-->
-                <div class="col-md-3"></div>
-                <div class="col-md-6" div style="width:200px; height:420px; background-color: #D99634">
-                </br>
-            
-                    <table id="example" class="table table-striped table-bordered " style="width:100%">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
-                                    <td>$320,800</td>
-                                </tr>
-                                <tr>
-                                    <td>Garrett Winters</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>63</td>
-                                    <td>2011/07/25</td>
-                                    <td>$170,750</td>
-                                </tr>
-                                <tr>
+                <div class="col-md-2"></div>
+                <div class="col-md-8" div style="width:200px; height:420px; border-radius: 10px; background-color: rgba(255, 255,255, 0.9)">
+                    </br>
+
+                    <table id="example" class="table table-bordered  table-warning rounded" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Modalidade</th>
+                                <th>Credito</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                                <td>R$ 10</td>
+
+                            </tr>
+                            <tr>
+                                <td>Garrett Winters</td>
+                                <td>Accountant</td>
+                                <td>Tokyo</td>
+                                <td>R$ 10</td>
+
+                            </tr>
+                            <tr>
+                                <td>Ashton Cox</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>R$ 10</td>
+
+                            </tr>
+                            <tr>
+                                <td>Ashton Cox</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>R$ 10</td>
+
+                            </tr>
+                            <tr>
+                                <td>Ashton Cox</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>R$ 10</td>
+
+                            </tr>
+                            <tr>
+                                <td>Ashton Cox</td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>R$ 10</td>
+
+                            </tr>
+                            <tr>
                                     <td>Ashton Cox</td>
                                     <td>Junior Technical Author</td>
                                     <td>San Francisco</td>
-                                    <td>66</td>
-                                    <td>2009/01/12</td>
-                                    <td>$86,000</td>
-                                </tr>
-                                </tbody>
-                    
-            
-                    <script>
-                        $('input#txt_consulta').quicksearch('table#tabela tbody tr');
-                    </script>
+                                    <td>R$ 10</td>
+    
+                            </tr>
+                            <tr>
+                                    <td>Ashton Cox</td>
+                                    <td>Junior Technical Author</td>
+                                    <td>San Francisco</td>
+                                    <td>R$ 10</td>
+    
+                            </tr>
+
+                            
+                        </tbody>
+                        </table>
+                        <a class="btn btn-gold text-white" href="principal.html" role="button">Voltar</a>
+
+
+                        <script>
+                            $('input#txt_consulta').quicksearch('table#tabela tbody tr');
+                        </script>
 
                 </div>
-                <div class="col-md-6"></div>
-                
-               <!--<div class="col-3"></div>-->
+                <div class="col-md-2"></div>
+
+                <!--<div class="col-3"></div>-->
             </div>
             <!--Fim formulario login-->
         </div>
 
     </section><!-- Fím seção Login-->
-
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -145,11 +160,38 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        $('#example').DataTable();
-      } );
+
+
+    <script >
+        $(document).ready(function () {
+            $('#example').DataTable(
+                {
+                    "pageLength": 5,
+                    "lengthMenu": [ 4,5 ],
+                    language: {
+                    search: "Pesquisar&nbsp;:",
+                    lengthMenu: "Mostrando _MENU_ ",
+                    info: "Exibindo _START_ &agrave; _END_ de _TOTAL_ elementos",
+                    paginate: {
+                            first: "Premier",
+                            previous: "Anterior",
+                            next: "Proximo",
+                            last: "Anterior"
+                        },
+                    
+                    }
+                },
+            
+            );
+        });
     </script>
+<!--
+    <script>
+        $('#example').dataTable( {
+  "pageLength": 5
+} );
+    </script> -->
+
 </body>
 
 </html>
