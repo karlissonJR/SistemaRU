@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block btnSair %}
-  <a class="btn btn-danger float-right" href="index.html" role="button">Sair</a>
+  <a class="btn btn-danger float-right" href="{% url 'logout' %}" role="button">Sair</a>
 {% endblock %}
 
 {% block conteudo %}
@@ -36,7 +36,7 @@
           <img class="card-img-top" src="{% static 'img/gru1.png' %}" alt="Imagem de capa do card">
           <div class="card-body">
             <h5 class="card-title pt-1">Cadastrar GRU</h5>
-            <a href="cadastrar-gru.html" class="btn btn-marinho text-white">Entrar</a>
+            <a href="{% url 'cadastrar_gru' %}" class="btn btn-marinho text-white">Entrar</a>
           </div>
         </div>
 
@@ -46,7 +46,7 @@
           <img class="card-img-top" src="{% static 'img/debitar1.png' %}" alt="Imagem de capa do card">
           <div class="card-body">
             <h5 class="card-title pt-1">Debitar CPF</h5>
-            <a href="debitar-cpf.html" class="btn btn-marinho text-white">Entrar</a>
+            <a href="{% url 'debitar_cpf' %}" class="btn btn-marinho text-white">Entrar</a>
           </div>
         </div>
 

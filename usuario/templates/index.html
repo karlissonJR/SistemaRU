@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block conteudo %}
+
+        <section ><!-- Inicio seção Login-->
+            <div class="container pt-5">
+                <div class="row">
+                    <div class="col-md-12"><!-- texto da seção-->
+                      <div class="text-center" >
+                          <h1  class="text-white" class="display-5" class="text-center">Login</h1>
+                      </div>  
+                    </div><!-- fim do texto da seção-->
+                </div>
+                
+                <div class="row"> <!-- Formulario login-->
+                  <div class="col-3"></div>
+                  <div class="col-md-6" >
+                      <form class="text-left" method="post">
+                        {% csrf_token %}
+                        {% for field in form %}
+                          <div  class="form-group">
+                            {% if field.name == 'password' %}
+                              <label for="{{field.id_for_label}}" class="text-white">{{field.label}}</label>
+                              <input type="password" class="form-control" id="{{field.id_for_label}}" value="{{field.value|default_if_none:''}}" name="{{field.name}}">
+                            {% else %}
+                              <label  for="{{field.id_for_label}}" class="text-white" >{{field.label}}</label>
+                              <input type="text" class="form-control" id="{{field.id_for_label}}" value="{{field.value|default_if_none:''}}" name="{{field.name}}" style="min-width:10px;" >
+                            {% endif %}
+                          </div>
+                        {% endfor %}
+                        <!--Lembrar de mim  
+                        <div class="text-white" class="checkbox"> 
+                          <label><input type="checkbox"> remember me</label>
+                        </div> -->
+                        <a class="btn btn-gold text-white" href="{% url 'cadastro' %}" role="button">Cadastrar</a>
+                        <!--<button type="submit" class="btn btn-warning">Cadastrar</button>-->
+                        
+                        <!--<button type="submit" class="btn btn-success" t>Entrar</button>-->
+                        <button type="submit" class="btn btn-success float-right" role="button">Entrar</button>
+
+                      </form>
+                  </div>
+                    <div class="col-3"></div>
+                </div> <!--Fim formulario login-->    
+            </div>
+
+        </section><!-- Fím seção Login-->
+
+{% endblock %}

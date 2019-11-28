@@ -21,7 +21,7 @@ class Consumidor(Usuario):
 class GRU(models.Model):
     codigo_barras = models.CharField(primary_key=True, max_length=25)
     valor = models.DecimalField(decimal_places=2, max_digits=10)
-    nome_computador = models.CharField(max_length=50)
+    nome_comprador = models.CharField(max_length=50)
     competencia = models.CharField(max_length=50)
     funcionario = models.ForeignKey(Funcionario, on_delete=models.CASCADE)
 

@@ -2,51 +2,57 @@
 {% load static %}
 
 {% block conteudo %}
-
-    <section>
-        <!-- Inicio seção Login-->
+    <section><!-- Inicio seção Login-->
+        
         <div class="container pt-5">
             <div class="row">
                 <div class="col-md-12">
                     <!-- texto da seção-->
                     <div class="text-center">
-                        <h1 class="text-white" class="display-5" class="text-center">Informações</h1>
+                        <h1 class="display-5 text-white" class="text-center">Informações</h1>
                     </div>
                 </div><!-- fim do texto da seção-->
             </div>
 
-            <div class="row pt-3"  >
+            <div class="row pt-3">
                 <!-- Formulario login-->
-                <div class="col-3"></div>
-                <div class="col-md-6">
-                    
-                    <table class="table table-warning rounded">
+                <!--<div class="col-3"></div>-->
+                <div class="col-md-2"></div>
+                <div class="col-md-8" div style="width:200px; height:420px; border-radius: 10px; background-color: rgba(255, 255,255, 0.9)">
+                    </br>
+
+                    <table id="example" class="table table-bordered  table-warning rounded" style="width:100%">
                         <thead>
-                          <tr>
-                            <th scope="col" >#</th>
-                            <th scope="col" >Nome</th>
-                            <th scope="col" >CPF</th>
-                            <th scope="col">Modalidade</th>
-                            <th scope="col">Credito</th>
-                          </tr>
+                            <tr>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Modalidade</th>
+                                <th>Credito</th>
+                            </tr>
                         </thead>
                         <tbody>
-                          {% for consumidor in consumidores %}
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>{{consumidor.nome}}</td>
-                            <td>{{consumidor.cpf}}</td>
-                            <td>{{consumidor.modalidade}}</td>
-                            <td>{{consumidor.credito}}</td>
-                          </tr>
-                          {% endfor %}
+                            {% for consumidor in consumidores %}
+                              <tr>
+                                  <td>{{consumidor.nome}}</td>
+                                  <td>{{consumidor.cpf}}</td>
+                                  <td>{{consumidor.modalidade}}</td>
+                                  <td>R$ {{consumidor.credito}}</td>
+
+                              </tr>
+                            {% endfor %}
                         </tbody>
-                      </table>
-                      <a class="btn btn-gold text-white" href="{% url 'principal' %}" role="button">Voltar</a>
+                        </table>
+                        <a class="btn btn-gold text-white" href="{% url 'principal' %}" role="button">Voltar</a>
+
+
+                        <script>
+                            $('input#txt_consulta').quicksearch('table#tabela tbody tr');
+                        </script>
 
                 </div>
-                
-                <div class="col-3"></div>
+                <div class="col-md-2"></div>
+
+                <!--<div class="col-3"></div>-->
             </div>
             <!--Fim formulario login-->
         </div>
