@@ -18,12 +18,19 @@ class Consumidor(Usuario):
     bolsista = models.BooleanField(default=False)
     modalidade = models.CharField(max_length=30)
 
+    
+
+    def __str__(self):
+        return self.nome
+
 class GRU(models.Model):
-    codigo_barras = models.CharField(primary_key=True, max_length=25)
+    #codigo_barras = models.CharField(primary_key=True, max_length=25)
     valor = models.DecimalField(decimal_places=2, max_digits=10)
-    nome_comprador = models.CharField(max_length=50)
-    competencia = models.CharField(max_length=50)
-    funcionario = models.ForeignKey(Funcionario, on_delete=models.CASCADE)
+    #competencia = models.CharField(max_length=50)
+    consumidor = models.ForeignKey(Consumidor, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.consumidor
 
 class Transacao(models.Model):
     tipo = models.CharField(max_length=15)

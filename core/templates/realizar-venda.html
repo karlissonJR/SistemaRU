@@ -9,7 +9,7 @@
                 <div class="col-md-12">
                     <!-- texto da seção-->
                     <div class="text-center">
-                        <h1 class="text-white" class="display-5" class="text-center">Debitar Cpf</h1>
+                        <h1 class="text-white" class="display-5" class="text-center">Realizar Venda</h1>
                     </div>
                 </div><!-- fim do texto da seção-->
             </div>
@@ -21,7 +21,7 @@
                     <form>
                         <div class="form-group">
                             <label for="inputAddress" class="text-white">CPF</label>
-                            <input type="text" class="form-control" id="inputAddress">
+                            <input type="text" class="form-control" id="inputAddress" minlength="11" maxlength="11">
                         </div>
                         <a class="btn btn-gold text-white" href="{% url 'principal' %}" role="button">Voltar</a>
                         <button type="submit"  class="btn btn-success float-right">Confirmar</button>
