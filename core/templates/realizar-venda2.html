@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block conteudo %}
+    <section>
+        <!-- Inicio seção Login-->
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- texto da seção-->
+                    <div class="text-center">
+                        <h1 class="text-white" class="display-5" class="text-center">Realizar Venda</h1>
+                    </div>
+                </div><!-- fim do texto da seção-->
+            </div>
+
+            <div class="row">
+                <!-- Formulario login-->
+                <div class="col-3"></div>
+                <div class="col-md-6">
+                    <form method="post">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            {% if field.name == "valor" %}
+                                <p class="text-white">Preço</p>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="{{field.name}}" id="{{field.id_for_label}}" value="{{1}}">
+                                    <label class="form-check-label text-white" for="{{field.id_for_label}}">1 Real</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="{{field.name}}" id="{{field.id_for_label}}" value="{{3}}">
+                                    <label class="form-check-label text-white" for="{{field.id_for_label}}">3 Reais</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="{{field.name}}" id="{{field.id_for_label}}" value="{{5}}">
+                                    <label class="form-check-label text-white" for="{{field.id_for_label}}">5 Reais</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="{{field.name}}" id="{{field.id_for_label}}" value="{{7}}">
+                                    <label class="form-check-label text-white" for="{{field.id_for_label}}">7 Reais</label>
+                                </div>
+                                <br/>
+                            {% endif %}
+                        {% endfor %}
+                        <a class="btn btn-gold text-white" href="{% url 'principal' %}" role="button">Voltar</a>
+                        <button type="submit"  class="btn btn-success float-right">Confirmar</button>
+                    </form>
+                </div>
+                <div class="col-3"></div>
+            </div>
+            <!--Fim formulario login-->
+        </div>
+
+    </section><!-- Fím seção Login-->
+
+{% endblock %}
